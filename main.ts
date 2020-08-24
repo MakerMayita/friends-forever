@@ -79,6 +79,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         `)
 })
 let Heroina: Sprite = null
+game.setDialogTextColor(10)
 game.showLongText("Habia una vez dos mejores amigas que se querian mucho", DialogLayout.Top)
 game.showLongText("Un día unos robots malos los atacaron", DialogLayout.Top)
 game.showLongText("Y separaron a las amigas un dia una de ellas quizo visitar a la otra", DialogLayout.Top)
@@ -104,3 +105,22 @@ Heroina = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
 controller.moveSprite(Heroina)
+scene.cameraFollowSprite(Heroina)
+tiles.setTilemap(tiles.createTilemap(hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`, img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, [myTiles.transparency16], TileScale.Sixteen))

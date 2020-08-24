@@ -1,4 +1,4 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="zZ6NxI7l71/~=+~P]m2,">Player</variable><variable type="KIND_SpriteKind" id="TFF_|mLm+B+|l:U})Znl">Projectile</variable><variable type="KIND_SpriteKind" id="0Ao!~1/HA5J-z?Y/tx:u">Food</variable><variable type="KIND_SpriteKind" id="G1;MiB*X3pN4ea7)A^H1">Enemy</variable><variable id="reuv8+6$JsYfH?iaoIX#">Heroina</variable><variable id="AjBsR*cMM;Lw7M5e;6FR">mySprite</variable></variables><block type="pxt-on-start" id="_j/H~s24T,AQ%O2/T-S7" x="20" y="0"><statement name="HANDLER"><block type="game_show_long_text" id="y8-/h_V`E$=QqEAuvcFd"><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id="NO7e,!!5|J*OF}c-9z%f"><field name="TEXT">Habia una vez dos mejores amigas que se querian mucho</field></shadow></value><next><block type="game_show_long_text" id="!mdALSay|$^2`VVOE6dY"><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id="!tv)Tx!LVPEVuLL-#6T:"><field name="TEXT">Un día unos robots malos los atacaron</field></shadow></value><next><block type="game_show_long_text" id="@+hAZx5gz+YpZ|pFlii="><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id="{fCROt*]SS}u%W-;|lBt"><field name="TEXT">Y separaron a las amigas un dia una de ellas quizo visitar a la otra</field></shadow></value><next><block type="game_show_long_text" id=".~S;{|P+O)vhP%)#*uGb"><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id=",0/+B[7!,9|O:{246xHk"><field name="TEXT">Pero los robots la encontraron y la llevaron muy lejos</field></shadow></value><next><block type="game_show_long_text" id="8{PoH2heNwQd;q,`KP1-"><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id="isv0{CFj*YVfx/VLQ`)|"><field name="TEXT">Tu misión es ayudar a tu amiga salvandola</field></shadow></value><next><block type="gamesetbackgroundcolor" id="o0xJ.eE|=CPJrq~Z/rG_"><value name="color"><shadow type="colorindexpicker" id="$iHSzrSaMl#(Z@)S=6u+"><field name="index">9</field></shadow></value><next><block type="variables_set" id="C(8ozJBu*ckZg(0w4jRK"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="FH)k)NzaFl#WOUv^db|9"><value name="img"><shadow type="screen_image_picker" id="V/j^y}rX82m{kVFuD#GX"><field name="img">img`
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="zZ6NxI7l71/~=+~P]m2,">Player</variable><variable type="KIND_SpriteKind" id="TFF_|mLm+B+|l:U})Znl">Projectile</variable><variable type="KIND_SpriteKind" id="0Ao!~1/HA5J-z?Y/tx:u">Food</variable><variable type="KIND_SpriteKind" id="G1;MiB*X3pN4ea7)A^H1">Enemy</variable><variable id="reuv8+6$JsYfH?iaoIX#">Heroina</variable><variable id="AjBsR*cMM;Lw7M5e;6FR">mySprite</variable></variables><block type="pxt-on-start" id="_j/H~s24T,AQ%O2/T-S7" x="20" y="0"><statement name="HANDLER"><block type="game_dialog_set_text_color" id="*Mj/=~@1;?saSi92qjj]"><value name="color"><shadow type="colorindexpicker" id="0LzO-T,wIN}]fxR.gqPz"><field name="index">10</field></shadow></value><next><block type="game_show_long_text" id="y8-/h_V`E$=QqEAuvcFd"><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id="NO7e,!!5|J*OF}c-9z%f"><field name="TEXT">Habia una vez dos mejores amigas que se querian mucho</field></shadow></value><next><block type="game_show_long_text" id="!mdALSay|$^2`VVOE6dY"><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id="!tv)Tx!LVPEVuLL-#6T:"><field name="TEXT">Un día unos robots malos los atacaron</field></shadow></value><next><block type="game_show_long_text" id="@+hAZx5gz+YpZ|pFlii="><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id="{fCROt*]SS}u%W-;|lBt"><field name="TEXT">Y separaron a las amigas un dia una de ellas quizo visitar a la otra</field></shadow></value><next><block type="game_show_long_text" id=".~S;{|P+O)vhP%)#*uGb"><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id=",0/+B[7!,9|O:{246xHk"><field name="TEXT">Pero los robots la encontraron y la llevaron muy lejos</field></shadow></value><next><block type="game_show_long_text" id="8{PoH2heNwQd;q,`KP1-"><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id="isv0{CFj*YVfx/VLQ`)|"><field name="TEXT">Tu misión es ayudar a tu amiga salvandola</field></shadow></value><next><block type="gamesetbackgroundcolor" id="o0xJ.eE|=CPJrq~Z/rG_"><value name="color"><shadow type="colorindexpicker" id="$iHSzrSaMl#(Z@)S=6u+"><field name="index">9</field></shadow></value><next><block type="variables_set" id="C(8ozJBu*ckZg(0w4jRK"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="FH)k)NzaFl#WOUv^db|9"><value name="img"><shadow type="screen_image_picker" id="V/j^y}rX82m{kVFuD#GX"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -15,14 +15,7 @@
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`</field></shadow></value><value name="kind"><shadow type="spritekind" id="s|QoNM(e|B:rZz=^cn:$"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="Tpdvu$hqi;!`+J;@9bD9"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id="bMqC*RpGX/(i1$kfaVYs"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="keyonevent" id="=!D,.w}#*Q)|P}2EJJ*M" x="380" y="640"><field name="button">controller.up</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="spritesetimage" id=",AwZQh?*SmVG@uPZ9mgC"><value name="sprite"><block type="variables_get" id="LR5pvw^,n%Z+IfrzzPp9"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value><value name="img"><shadow type="screen_image_picker" id=".Iy~P`U`Z6:I.:SiNED|"><field name="img">img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . 3 . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="s|QoNM(e|B:rZz=^cn:$"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="Tpdvu$hqi;!`+J;@9bD9"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id="bMqC*RpGX/(i1$kfaVYs"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value><next><block type="camerafollow" id="(4z33j;XNp,?]w|tqSZ3"><value name="sprite"><block type="variables_get" id="A?:v7w3,DA+RP5SYgYcR"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value><next><block type="tilemap_editor" id="U@bB.XTK=XmbRoO0Y-/V"><field name="tilemap">tiles.createTilemap(hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`, img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -32,7 +25,14 @@
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`</field></shadow></value></block></statement></block><block type="keyonevent" id="wM]y.Us_O=+kERBdq#T^" x="0" y="780"><field name="button">controller.down</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="spritesetimage" id="TO]tQxaTFE($u]70Lva`"><value name="sprite"><block type="variables_get" id="0Jh{uS^sql9#a!|;x}vh"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value><value name="img"><shadow type="screen_image_picker" id="q*kXQXRF9T.zgr/m3Q#K"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, [myTiles.transparency16], TileScale.Sixteen)</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="keyonevent" id="wM]y.Us_O=+kERBdq#T^" x="0" y="780"><field name="button">controller.down</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="spritesetimage" id="TO]tQxaTFE($u]70Lva`"><value name="sprite"><block type="variables_get" id="0Jh{uS^sql9#a!|;x}vh"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value><value name="img"><shadow type="screen_image_picker" id="q*kXQXRF9T.zgr/m3Q#K"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -75,6 +75,23 @@
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . 3 . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value></block></statement></block><block type="keyonevent" id="=!D,.w}#*Q)|P}2EJJ*M" x="390" y="930"><field name="button">controller.up</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="spritesetimage" id=",AwZQh?*SmVG@uPZ9mgC"><value name="sprite"><block type="variables_get" id="LR5pvw^,n%Z+IfrzzPp9"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value><value name="img"><shadow type="screen_image_picker" id=".Iy~P`U`Z6:I.:SiNED|"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 3 . . . . . . . . 
+. . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
