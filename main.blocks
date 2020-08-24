@@ -1,1 +1,86 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" id="_j/H~s24T,AQ%O2/T-S7" x="0" y="0"><statement name="HANDLER"><block type="gamesetbackgroundcolor" id="o0xJ.eE|=CPJrq~Z/rG_"><value name="color"><shadow type="colorindexpicker" id="$iHSzrSaMl#(Z@)S=6u+"><field name="index">9</field></shadow></value></block></statement></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="zZ6NxI7l71/~=+~P]m2,">Player</variable><variable type="KIND_SpriteKind" id="TFF_|mLm+B+|l:U})Znl">Projectile</variable><variable type="KIND_SpriteKind" id="0Ao!~1/HA5J-z?Y/tx:u">Food</variable><variable type="KIND_SpriteKind" id="G1;MiB*X3pN4ea7)A^H1">Enemy</variable><variable id="reuv8+6$JsYfH?iaoIX#">Heroina</variable><variable id="AjBsR*cMM;Lw7M5e;6FR">mySprite</variable></variables><block type="pxt-on-start" id="_j/H~s24T,AQ%O2/T-S7" x="0" y="0"><statement name="HANDLER"><block type="gamesetbackgroundcolor" id="o0xJ.eE|=CPJrq~Z/rG_"><value name="color"><shadow type="colorindexpicker" id="$iHSzrSaMl#(Z@)S=6u+"><field name="index">9</field></shadow></value><next><block type="variables_set" id="C(8ozJBu*ckZg(0w4jRK"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="FH)k)NzaFl#WOUv^db|9"><value name="img"><shadow type="screen_image_picker" id="V/j^y}rX82m{kVFuD#GX"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . 3 3 3 . . . . . . . 
+. . . . . . 3 3 3 . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="s|QoNM(e|B:rZz=^cn:$"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="Tpdvu$hqi;!`+J;@9bD9"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id="bMqC*RpGX/(i1$kfaVYs"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value></block></next></block></next></block></statement></block><block type="keyonevent" id="@Akz/a_%ddRb$0W`LZW3" x="10" y="250"><field name="button">controller.left</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="spritesetimage" id=",8La)F`7A@$n0SX};x9M"><value name="sprite"><block type="variables_get" id="VuSL,WavMJQC)T|8/FGy"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value><value name="img"><shadow type="screen_image_picker" id="dcHu|9l0]J`59^*UVQE3"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 3 . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value></block></statement></block><block type="keyonevent" id="=!D,.w}#*Q)|P}2EJJ*M" x="370" y="250"><field name="button">controller.up</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="spritesetimage" id=",AwZQh?*SmVG@uPZ9mgC"><value name="sprite"><block type="variables_get" id="LR5pvw^,n%Z+IfrzzPp9"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value><value name="img"><shadow type="screen_image_picker" id=".Iy~P`U`Z6:I.:SiNED|"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 3 . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value></block></statement></block><block type="keyonevent" id="wM]y.Us_O=+kERBdq#T^" x="10" y="410"><field name="button">controller.down</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="spritesetimage" id="TO]tQxaTFE($u]70Lva`"><value name="sprite"><block type="variables_get" id="0Jh{uS^sql9#a!|;x}vh"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value><value name="img"><shadow type="screen_image_picker" id="q*kXQXRF9T.zgr/m3Q#K"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . 3 . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value></block></statement></block><block type="keyonevent" id="vu?^Hg%X^Ef1k][;?lOQ" x="370" y="410"><field name="button">controller.right</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="spritesetimage" id="K}+T4QQy^LfYv}`tG7(r"><value name="sprite"><block type="variables_get" id="VEz;hF74Adc;Scc+J1sy"><field name="VAR" id="reuv8+6$JsYfH?iaoIX#">Heroina</field></block></value><value name="img"><shadow type="screen_image_picker" id="gH/]|jja/dQW;pQS%MI*"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . 3 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value></block></statement></block></xml>
