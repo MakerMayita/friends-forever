@@ -21,6 +21,11 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         `, Heroina, 50, 0)
 })
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (Heroina.isHittingTile(CollisionDirection.Bottom)) {
+        Heroina.vy = -150
+    }
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     Heroina.setImage(img`
         . . . . . . . . . . . . . . . . 
