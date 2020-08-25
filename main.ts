@@ -41,7 +41,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 let Heroina: Sprite = null
 game.setDialogTextColor(10)
 game.showLongText("Habia una vez dos mejores amigas que se querian mucho", DialogLayout.Top)
-game.showLongText("Un día unos robots malos los atacaron", DialogLayout.Top)
+game.showLongText("Un día unos robots malos las atacaron", DialogLayout.Top)
 game.showLongText("Y separaron a las amigas un dia una de ellas quizo visitar a la otra", DialogLayout.Top)
 game.showLongText("Pero los robots la encontraron y la llevaron muy lejos", DialogLayout.Top)
 game.showLongText("Tu misión es ayudar a tu amiga salvandola", DialogLayout.Top)
