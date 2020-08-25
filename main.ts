@@ -103,12 +103,12 @@ let mySprite = sprites.create(img`
     . . . f 3 4 4 1 4 4 3 f . . . . 
     . . . . f 4 1 f 1 4 f . . . . . 
     . . . . . f f f f f . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
+    . . . . f 4 4 4 4 4 f . . . . . 
+    . . . . f 4 f 4 f 4 f . . . . . 
+    . . . . f 4 f 4 f 4 f . . . . . 
+    . . . . f 4 f 4 f 4 f . . . . . 
+    . . . . f 4 f 4 f 4 f . . . . . 
+    . . . . f f 1 f 1 f f . . . . . 
     `, SpriteKind.Player)
 controller.moveSprite(Heroina, 100, 0)
 scene.setBackgroundColor(9)
