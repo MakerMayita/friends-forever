@@ -150,3 +150,9 @@ tiles.setTilemap(tiles.createTilemap(hex`200020000000000000000000000000000000000
     `, [myTiles.transparency16,sprites.castle.saplingPine,myTiles.tile2,myTiles.tile3], TileScale.Sixteen))
 info.startCountdown(30)
 info.setLife(3)
+game.onUpdate(function () {
+    if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile2)) {
+        Heroina.setPosition(10, 0)
+        info.changeLifeBy(-1)
+    }
+})
