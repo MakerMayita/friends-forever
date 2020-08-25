@@ -153,7 +153,7 @@ info.setLife(3)
 music.playMelody("C5 B A G F E D C ", 120)
 game.onUpdate(function () {
     if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile2)) {
-        Heroina.setPosition(40, 0)
+        Heroina.setPosition(15, 0)
         info.changeLifeBy(-1)
     }
 })
