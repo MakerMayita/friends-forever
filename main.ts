@@ -136,5 +136,4 @@ tiles.setTilemap(tiles.createTilemap(hex`200020000000000000000000000000000000000
     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
     `, [myTiles.transparency16,sprites.castle.saplingPine,myTiles.tile3,myTiles.tile1], TileScale.Sixteen))
-info.startCountdown(30)
 info.setLife(3)
