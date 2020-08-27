@@ -24,6 +24,9 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         `, Heroina, 50, 0)
 })
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile1, function (sprite, location) {
+    info.changeLifeBy(-1)
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Heroina.isHittingTile(CollisionDirection.Bottom)) {
         Heroina.vy = -150
@@ -68,9 +71,6 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `)
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile1, function (sprite, location) {
-    info.changeLifeBy(-1)
 })
 let projectile: Sprite = null
 let Heroina: Sprite = null
@@ -137,3 +137,4 @@ tiles.setTilemap(tiles.createTilemap(hex`200020000000000000000000000000000000000
     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
     `, [myTiles.transparency16,sprites.castle.saplingPine,myTiles.tile3,myTiles.tile1], TileScale.Sixteen))
 info.setLife(3)
+info.startCountdown(10)
