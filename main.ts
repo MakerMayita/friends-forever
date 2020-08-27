@@ -24,9 +24,6 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         `, Heroina, 50, 0)
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile1, function (sprite, location) {
-    info.changeLifeBy(-1)
-})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Heroina.isHittingTile(CollisionDirection.Bottom)) {
         Heroina.vy = -150
@@ -72,6 +69,9 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         `)
 })
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile1, function (sprite, location) {
+    info.changeLifeBy(-1)
+})
 let projectile: Sprite = null
 let Heroina: Sprite = null
 game.setDialogTextColor(10)
@@ -89,14 +89,14 @@ Heroina = sprites.create(img`
     . . e e e 4 f 4 4 f 4 e e e . . 
     . . . . . 4 4 4 4 4 4 . . . . . 
     . . . . . 4 4 4 4 4 4 . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
+    . . . . . . . 3 . . . . . . . . 
+    . . . . . . . 3 . . . . . . . . 
+    . . 3 3 3 3 3 3 3 3 3 3 . . . . 
+    . . . . . . . 3 . . . . . . . . 
+    . . . . . . . 3 . . . . . . . . 
+    . . . . . . . 3 . . . . . . . . 
+    . . . . . . 3 3 3 . . . . . . . 
+    . . . . . 3 . . . 3 . . . . . . 
     `, SpriteKind.Player)
 controller.moveSprite(Heroina, 100, 0)
 scene.setBackgroundColor(9)
