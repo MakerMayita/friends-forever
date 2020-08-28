@@ -19,6 +19,11 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
     info.changeLifeBy(-1)
 })
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (Heroina.isHittingTile(CollisionDirection.Bottom)) {
+        Heroina.vy = -150
+    }
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     Heroina.setImage(img`
         . . . . . . . . . . . . . . . . 
