@@ -135,6 +135,7 @@ info.setLife(3)
 info.startCountdown(30)
 game.onUpdate(function () {
     if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile4)) {
-    	
+        Heroina.setPosition(10, 0)
+        info.changeLifeBy(-1)
     }
 })
