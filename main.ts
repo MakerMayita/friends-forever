@@ -1,11 +1,30 @@
 namespace SpriteKind {
     export const Mascota = SpriteKind.create()
+    export const Premio_1 = SpriteKind.create()
 }
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location) {
     game.over(true)
 })
 function Nevel_1 () {
     game.splash("Level_1")
+    amiga = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . e e e e e e . . . . . 
+        . . . . . e 4 4 4 4 e . . . . . 
+        . . . . . e f 4 4 f e . . . . . 
+        . . . . . e 4 4 4 4 e . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . 7 7 7 7 7 7 7 . . . . 
+        . . . . 7 7 . 7 7 7 . 7 . . . . 
+        . . . . 7 . . 7 7 7 . 7 . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . 9 . 9 . . . . . . 
+        . . . . . . 9 9 . 9 9 . . . . . 
+        . . . . . . 9 . . . 9 . . . . . 
+        . . . . . . 9 . . . 9 . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Premio_1)
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
@@ -84,6 +103,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         `)
 })
 let projectile: Sprite = null
+let amiga: Sprite = null
 let Heroina: Sprite = null
 Nevel_1()
 game.setDialogTextColor(10)
