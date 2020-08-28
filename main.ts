@@ -160,8 +160,3 @@ game.onUpdate(function () {
         Heroina.ay = 300
     }
 })
-game.onUpdate(function () {
-    if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile4)) {
-    	
-    }
-})
