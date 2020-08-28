@@ -7,24 +7,11 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location
 })
 function Nevel_1 () {
     game.splash("Level_1")
-    amiga = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . e e e e e e . . . . . 
-        . . . . . e 4 4 4 4 e . . . . . 
-        . . . . . e f 4 4 f e . . . . . 
-        . . . . . e 4 4 4 4 e . . . . . 
-        . . . . . . . 4 4 . . . . . . . 
-        . . . . . 7 7 7 7 7 7 7 . . . . 
-        . . . . 7 7 . 7 7 7 . 7 . . . . 
-        . . . . 7 . . 7 7 7 . 7 . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . 9 . 9 . . . . . . 
-        . . . . . . 9 9 . 9 9 . . . . . 
-        . . . . . . 9 . . . 9 . . . . . 
-        . . . . . . 9 . . . 9 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.Premio_1)
+    game.showLongText("Habia una vez dos mejores amigas que se querian mucho", DialogLayout.Top)
+    game.showLongText("Un día unos robots malos las atacaron", DialogLayout.Top)
+    game.showLongText("Y separaron a las amigas un dia una de ellas quizo visitar a la otra", DialogLayout.Top)
+    game.showLongText("Pero los robots la encontraron y la llevaron muy lejos", DialogLayout.Top)
+    game.showLongText("Tu misión es ayudar a tu amiga salvandola", DialogLayout.Top)
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
@@ -103,7 +90,6 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         `)
 })
 let projectile: Sprite = null
-let amiga: Sprite = null
 let Heroina: Sprite = null
 Nevel_1()
 game.setDialogTextColor(10)
