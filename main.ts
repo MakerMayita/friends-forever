@@ -4,6 +4,9 @@ namespace SpriteKind {
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location) {
     game.over(true)
 })
+function Nevel_1 () {
+    game.splash("Level_1")
+}
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
         . . 6 6 6 6 . . 
@@ -82,6 +85,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 let projectile: Sprite = null
 let Heroina: Sprite = null
+Nevel_1()
 game.setDialogTextColor(10)
 game.showLongText("Habia una vez dos mejores amigas que se querian mucho", DialogLayout.Top)
 game.showLongText("Un día unos robots malos las atacaron", DialogLayout.Top)
