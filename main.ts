@@ -16,11 +16,6 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         . . 6 6 6 6 . . 
         `, Heroina, 50, 0)
 })
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (Heroina.isHittingTile(CollisionDirection.Bottom)) {
-        Heroina.vy = -150
-    }
-})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     Heroina.setImage(img`
         . . . . . . . . . . . . . . . . 
@@ -135,7 +130,11 @@ info.setLife(3)
 info.startCountdown(30)
 game.onUpdate(function () {
     if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile4)) {
-        Heroina.setPosition(10, 0)
         info.changeLifeBy(-1)
+    }
+})
+game.onUpdate(function () {
+    if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile4)) {
+    	
     }
 })
