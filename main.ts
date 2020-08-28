@@ -16,6 +16,9 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         . . 6 6 6 6 . . 
         `, Heroina, 50, 0)
 })
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
+    info.changeLifeBy(-1)
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     Heroina.setImage(img`
         . . . . . . . . . . . . . . . . 
@@ -129,8 +132,8 @@ tiles.setTilemap(tiles.createTilemap(hex`400010000404040404040404040404040404040
 info.setLife(3)
 info.startCountdown(30)
 game.onUpdate(function () {
-    if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile4)) {
-        info.changeLifeBy(-1)
+    if (Heroina.isHittingTile(CollisionDirection.Bottom)) {
+        Heroina.ay = 300
     }
 })
 game.onUpdate(function () {
