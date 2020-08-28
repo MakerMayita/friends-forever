@@ -6,22 +6,14 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . 8 8 8 8 8 8 8 8 . . 
-        . . . . . 8 8 8 8 8 8 8 8 . . . 
-        . . . . . . 8 9 9 9 9 9 . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . 6 6 6 6 . . 
+        . 6 8 8 8 8 6 . 
+        6 8 8 9 9 9 8 6 
+        6 8 9 9 9 9 9 6 
+        6 8 9 9 9 9 9 6 
+        6 8 8 9 9 9 9 6 
+        . 6 8 8 8 8 6 . 
+        . . 6 6 6 6 . . 
         `, Heroina, 50, 0)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
