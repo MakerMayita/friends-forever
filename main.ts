@@ -50,7 +50,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     Heroina.setImage(img`
         . . . . . . . . . . . . . . . . 
-        . . . . . 9 9 9 9 9 9 . . . . . 
+        . . . . 9 9 9 9 9 9 9 9 . . . . 
         9 9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 
         9 9 9 9 9 4 f 4 4 f 4 9 9 9 9 9 
         9 9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 
