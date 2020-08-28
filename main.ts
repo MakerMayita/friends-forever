@@ -133,3 +133,8 @@ tiles.setTilemap(tiles.createTilemap(hex`400010000404040404040404040404040404040
     `, [myTiles.transparency16,sprites.dungeon.greenOuterNorth0,myTiles.tile3,myTiles.tile4,myTiles.tile5], TileScale.Sixteen))
 info.setLife(3)
 info.startCountdown(30)
+game.onUpdate(function () {
+    if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile4)) {
+    	
+    }
+})
