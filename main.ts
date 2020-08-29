@@ -1,5 +1,6 @@
 namespace SpriteKind {
     export const Mascota = SpriteKind.create()
+    export const premio = SpriteKind.create()
 }
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location) {
     game.over(true)
@@ -16,6 +17,9 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         . . 6 6 6 6 . . 
         `, Heroina, 50, 0)
 })
+function Level_1 () {
+    game.splash("Nivel 1")
+}
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
     info.changeLifeBy(-1)
 })
@@ -82,6 +86,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 let projectile: Sprite = null
 let Heroina: Sprite = null
+Level_1()
 game.setDialogTextColor(10)
 scene.setBackgroundImage(img`
     3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
