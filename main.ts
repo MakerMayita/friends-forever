@@ -165,10 +165,10 @@ function Nivel_2 () {
         . . . . . . . . . . . . 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . 2 2 2 . . . . . . . . . . . . . . 2 2 2 . . . . 2 2 2 
         `, [myTiles.transparency16,myTiles.tile3,myTiles.tile4,myTiles.tile9,myTiles.tile11], TileScale.Sixteen))
 }
-let Heroina: Sprite = null
 let projectile: Sprite = null
+let Heroina: Sprite = null
 Level_1()
-game.setDialogTextColor(10)
+game.setDialogTextColor(3)
 scene.setBackgroundImage(img`
     7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
     7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
@@ -829,6 +829,7 @@ tiles.setTilemap(tiles.createTilemap(hex`400010000303030303030303030303030303030
 info.setLife(3)
 info.startCountdown(30)
 music.playMelody("C5 B A G F E D C ", 120)
+controller.moveSprite(Heroina)
 game.onUpdate(function () {
     if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile4)) {
     	

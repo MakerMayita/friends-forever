@@ -1,20 +1,18 @@
 {
-    "name": "friends forever",
-    "description": "",
+    "name": "friends-forever",
     "dependencies": {
-        "device": "*",
-        "animation": "*"
+        "device": "*"
     },
     "files": [
+        ".vscode/settings.json",
+        ".vscode/tasks.json",
+        "README.md",
         "main.blocks",
         "main.ts",
-        "README.md",
+        "test.ts",
         "tilemap.g.jres",
         "tilemap.g.ts",
-        null
-    ],
-    "testFiles": [
-        "test.ts"
+        "tsconfig.json"
     ],
     "targetVersions": {
         "target": "1.0.16",
