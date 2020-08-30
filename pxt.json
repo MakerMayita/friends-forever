@@ -1,7 +1,8 @@
 {
     "name": "friends-forever",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "animation": "*"
     },
     "files": [
         ".vscode/settings.json",

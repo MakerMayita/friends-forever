@@ -147,8 +147,8 @@ function Nivel_2 () {
     info.startCountdown(30)
     Amiga()
 }
-let Heroina: Sprite = null
 let projectile: Sprite = null
+let Heroina: Sprite = null
 Level_1()
 game.setDialogTextColor(3)
 scene.setBackgroundImage(img`
@@ -813,6 +813,32 @@ tiles.setTilemap(tiles.createTilemap(hex`400010000303030303030303030303030303030
 info.setLife(3)
 info.startCountdown(30)
 music.playMelody("C5 B A G F E D C ", 120)
+Heroina = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . 9 9 9 9 9 9 9 9 . . . . 
+    9 9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 
+    9 9 9 9 9 4 f 4 4 f 4 9 9 9 9 9 
+    9 9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 
+    . . . . 9 4 f f f f 4 9 . . . . 
+    . . . 9 . 4 4 4 4 4 4 . 9 . . . 
+    . . . 9 . . . 4 4 . . . 9 . . . 
+    . . . a a a a 3 3 a a a a . . . 
+    . . . a a a a 3 3 a a a a . . . 
+    . . . a a . a 3 3 a . a a . . . 
+    . . . a a . a 3 3 a . a a . . . 
+    . . . 4 4 . a 3 3 a . 4 4 . . . 
+    . . . 4 4 . a 3 3 a . 4 4 . . . 
+    . . . . . . a 3 3 a . . . . . . 
+    . . . . . 3 3 3 3 3 3 . . . . . 
+    . . . . 3 3 3 3 3 3 3 3 . . . . 
+    . . . 3 3 3 3 3 3 3 3 3 3 . . . 
+    . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
+    . . . . . . 4 . . 4 . . . . . . 
+    . . . . . . 4 . . 4 . . . . . . 
+    . . . . . . 4 . . 4 . . . . . . 
+    . . . . . . 4 . . 4 . . . . . . 
+    . . . . . 3 3 . . 3 3 . . . . . 
+    `, SpriteKind.Player)
 game.onUpdate(function () {
     if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile4)) {
     	
