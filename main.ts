@@ -826,6 +826,7 @@ tiles.setTilemap(tiles.createTilemap(hex`400010000303030303030303030303030303030
     `, [myTiles.transparency16,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6], TileScale.Sixteen))
 info.setLife(3)
 info.startCountdown(30)
+info.setScore(0)
 music.playMelody("C5 B A G F E D C ", 120)
 Heroina = sprites.create(img`
     . . . . . . . . . . . . . . . . 
