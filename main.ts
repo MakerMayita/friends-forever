@@ -161,6 +161,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
 let projectile: Sprite = null
 let izquierda: animation.Animation = null
 let parado: animation.Animation = null
+let tiempo_caminar = 0
 let Heroina: Sprite = null
 let robot: Sprite = null
 Level_1()
@@ -853,9 +854,9 @@ Heroina = sprites.create(img`
     . . . . . . 4 . . 4 . . . . . . 
     . . . . . 3 3 . . 3 3 . . . . . 
     `, SpriteKind.Player)
-let anim = animation.createAnimation(ActionKind.izquierda, 1000)
-anim = animation.createAnimation(ActionKind.derecha, 1000)
-anim = animation.createAnimation(ActionKind.parado, 1000)
+let anim = animation.createAnimation(ActionKind.izquierda, tiempo_caminar)
+anim = animation.createAnimation(ActionKind.derecha, tiempo_caminar)
+anim = animation.createAnimation(ActionKind.parado, tiempo_caminar)
 parado.addAnimationFrame(img`
     . . . . . . . . . . . . . . . . 
     . . . 9 9 9 9 9 9 9 9 . . . . . 
