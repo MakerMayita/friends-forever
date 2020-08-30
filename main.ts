@@ -1,10 +1,7 @@
 enum ActionKind {
     Walking,
     Idle,
-    Jumping,
-    izquierda,
-    derecha,
-    parado
+    Jumping
 }
 namespace SpriteKind {
     export const Mascota = SpriteKind.create()
@@ -161,7 +158,6 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
 let projectile: Sprite = null
 let izquierda: animation.Animation = null
 let parado: animation.Animation = null
-let tiempo_caminar = 0
 let Heroina: Sprite = null
 let robot: Sprite = null
 Level_1()
@@ -827,7 +823,6 @@ tiles.setTilemap(tiles.createTilemap(hex`400010000303030303030303030303030303030
     `, [myTiles.transparency16,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6], TileScale.Sixteen))
 info.setLife(3)
 info.startCountdown(30)
-info.setScore(0)
 music.playMelody("C5 B A G F E D C ", 120)
 Heroina = sprites.create(img`
     . . . . . . . . . . . . . . . . 
@@ -855,9 +850,7 @@ Heroina = sprites.create(img`
     . . . . . . 4 . . 4 . . . . . . 
     . . . . . 3 3 . . 3 3 . . . . . 
     `, SpriteKind.Player)
-let anim = animation.createAnimation(ActionKind.izquierda, tiempo_caminar)
-anim = animation.createAnimation(ActionKind.derecha, tiempo_caminar)
-anim = animation.createAnimation(ActionKind.parado, tiempo_caminar)
+let anim = animation.createAnimation(ActionKind.Walking, 1000)
 parado.addAnimationFrame(img`
     . . . . . . . . . . . . . . . . 
     . . . 9 9 9 9 9 9 9 9 . . . . . 
@@ -909,32 +902,6 @@ izquierda.addAnimationFrame(img`
     . . . . . . . 4 . . . . . . . . 
     . . . . . . . 4 . . . . . . . . 
     . . . . . . 3 3 . . . . . . . . 
-    `)
-izquierda.addAnimationFrame(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . 9 9 9 9 9 9 9 . . . . . 
-    . . . . 4 4 4 4 4 4 9 . 9 9 9 . 
-    . . . . 4 4 f 4 4 4 9 9 9 9 9 . 
-    . . . . 4 4 4 4 4 4 9 . 9 9 9 . 
-    . . . . f f f 4 4 4 9 . . . . . 
-    . . . . 4 4 4 4 4 4 9 . . . . . 
-    . . . . . . 4 4 . . . 9 . . . . 
-    . . . . . a a a a . . 9 . . . . 
-    . . . . . a b b a . . . . . . . 
-    . . . . . a b b a . . . . . . . 
-    . . . . . a b b a . . . . . . . 
-    . . . . . a 4 4 a . . . . . . . 
-    . . . . . a 4 4 a . . . . . . . 
-    . . . . . a a a a . . . . . . . 
-    . . . . 3 3 3 3 3 3 . . . . . . 
-    . . . 3 3 3 3 3 3 3 3 . . . . . 
-    . . 3 3 3 3 3 3 3 3 3 3 . . . . 
-    . 3 3 3 3 3 3 3 3 3 3 3 3 . . . 
-    . . . . 4 . . 4 . . . . . . . . 
-    . . . . 4 . . 4 . . . . . . . . 
-    . . . . 4 . . 4 . . . . . . . . 
-    . . . . 4 . . 4 . . . . . . . . 
-    . . . 3 3 . 3 3 . . . . . . . . 
     `)
 game.onUpdate(function () {
     if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile4)) {
