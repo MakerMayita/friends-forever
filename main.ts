@@ -1,10 +1,7 @@
 enum ActionKind {
     Walking,
     Idle,
-    Jumping,
-    izquierda,
-    derecha,
-    parado
+    Jumping
 }
 namespace SpriteKind {
     export const Mascota = SpriteKind.create()
@@ -854,9 +851,7 @@ Heroina = sprites.create(img`
     . . . . . . 4 . . 4 . . . . . . 
     . . . . . 3 3 . . 3 3 . . . . . 
     `, SpriteKind.Player)
-let anim = animation.createAnimation(ActionKind.izquierda, 1000)
-anim = animation.createAnimation(ActionKind.derecha, 1000)
-anim = animation.createAnimation(ActionKind.parado, 1000)
+let anim = animation.createAnimation(ActionKind.Walking, 1000)
 parado.addAnimationFrame(img`
     . . . . . . . . . . . . . . . . 
     . . . 9 9 9 9 9 9 9 9 . . . . . 
