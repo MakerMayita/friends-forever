@@ -58,6 +58,9 @@ function Level_1 () {
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
     info.changeLifeBy(-1)
 })
+controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.setAction(Heroina, ActionKind.parado)
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Heroina.isHittingTile(CollisionDirection.Bottom)) {
         Heroina.vy = -150
@@ -95,60 +98,10 @@ function Amiga () {
     Heroina.ay = 300
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    Heroina.setImage(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . 9 9 9 9 9 9 9 9 . . . . 
-        9 9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 
-        9 9 9 9 9 4 f 4 4 f 4 9 9 9 9 9 
-        9 9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 
-        . . . . 9 4 f f f f 4 9 . . . . 
-        . . . 9 . 4 4 4 4 4 4 . 9 . . . 
-        . . . 9 . . . 4 4 . . . 9 . . . 
-        . . . a a a a 3 3 a a a a . . . 
-        . . . a a a a 3 3 a a a a . . . 
-        . . . a a . a 3 3 a . a a . . . 
-        . . . a a . a 3 3 a . a a . . . 
-        . . . 4 4 . a 3 3 a . 4 4 . . . 
-        . . . 4 4 . a 3 3 a . 4 4 . . . 
-        . . . . . . a 3 3 a . . . . . . 
-        . . . . . 3 3 3 3 3 3 . . . . . 
-        . . . . 3 3 3 3 3 3 3 3 . . . . 
-        . . . 3 3 3 3 3 3 3 3 3 3 . . . 
-        . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
-        . . . . . . 4 . . 4 . . . . . . 
-        . . . . . . 4 . . 4 . . . . . . 
-        . . . . . . 4 . . 4 . . . . . . 
-        . . . . . . 4 . . 4 . . . . . . 
-        . . . . . 3 3 . . 3 3 . . . . . 
-        `)
+    animation.setAction(Heroina, ActionKind.izquierda)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    Heroina.setImage(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . 9 9 9 9 9 9 9 9 . . . . 
-        9 9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 
-        9 9 9 9 9 4 f 4 4 f 4 9 9 9 9 9 
-        9 9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 
-        . . . . 9 4 f f f f 4 9 . . . . 
-        . . . 9 . 4 4 4 4 4 4 . 9 . . . 
-        . . . 9 . . . 4 4 . . . 9 . . . 
-        . . . a a a a 3 3 a a a a . . . 
-        . . . a a a a 3 3 a a a a . . . 
-        . . . a a . a 3 3 a . a a . . . 
-        . . . a a . a 3 3 a . a a . . . 
-        . . . 4 4 . a 3 3 a . 4 4 . . . 
-        . . . 4 4 . a 3 3 a . 4 4 . . . 
-        . . . . . . a 3 3 a . . . . . . 
-        . . . . . 3 3 3 3 3 3 . . . . . 
-        . . . . 3 3 3 3 3 3 3 3 . . . . 
-        . . . 3 3 3 3 3 3 3 3 3 3 . . . 
-        . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
-        . . . . . . 4 . . 4 . . . . . . 
-        . . . . . . 4 . . 4 . . . . . . 
-        . . . . . . 4 . . 4 . . . . . . 
-        . . . . . . 4 . . 4 . . . . . . 
-        . . . . . 3 3 . . 3 3 . . . . . 
-        `)
+    animation.setAction(Heroina, ActionKind.derecha)
 })
 function Nivel_2 () {
     game.splash("Nivel 2")
