@@ -147,8 +147,12 @@ function Nivel_2 () {
     info.startCountdown(30)
     Amiga()
 }
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    robot.destroy()
+})
 let projectile: Sprite = null
 let Heroina: Sprite = null
+let robot: Sprite = null
 Level_1()
 game.setDialogTextColor(3)
 scene.setBackgroundImage(img`
@@ -767,7 +771,7 @@ scene.setBackgroundImage(img`
     `)
 game.showLongText("Tu misión es ayudar a tu amiga salvandola", DialogLayout.Top)
 Amiga()
-let robot = sprites.create(img`
+robot = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . f f f f . . . . . . . 
