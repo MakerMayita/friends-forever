@@ -6,6 +6,11 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location
     game.over(true)
     Nivel_3()
 })
+function Nivel_3 () {
+    game.splash("Nivel 3")
+    info.startCountdown(30)
+    Amiga()
+}
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location) {
     Nivel_2()
 })
@@ -141,11 +146,6 @@ function Nivel_2 () {
         . . . . . . . . . . . . . . . . . . 2 . . . . . . . 2 . . 2 2 2 . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . 2 2 2 
         . . . . . . . . . . . . 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . 2 2 2 . . . . . . . . . . . . . . 2 2 2 . . . . 2 2 2 
         `, [myTiles.transparency16,myTiles.tile3,myTiles.tile4,myTiles.tile9,myTiles.tile11], TileScale.Sixteen))
-}
-function Nivel_3 () {
-    game.splash("Nivel 3")
-    info.startCountdown(30)
-    Amiga()
 }
 let Heroina: Sprite = null
 let projectile: Sprite = null
