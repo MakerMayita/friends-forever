@@ -111,8 +111,8 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
 })
 let mySprite: Sprite = null
 let projectile: Sprite = null
-let parado: animation.Animation = null
 let heroina: Sprite = null
+let tiempo_caminar = 0
 let robot: Sprite = null
 game.setDialogTextColor(3)
 scene.setBackgroundImage(img`
@@ -777,8 +777,9 @@ tiles.setTilemap(tiles.createTilemap(hex`400010000303030303030303030303030303030
     `, [myTiles.transparency16,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6], TileScale.Sixteen))
 info.setLife(3)
 info.startCountdown(30)
-let izquierda = animation.createAnimation(ActionKind.izquierda, 1000)
-let derecha = animation.createAnimation(ActionKind.derecha, 1000)
+let izquierda = animation.createAnimation(ActionKind.izquierda, tiempo_caminar)
+let derecha = animation.createAnimation(ActionKind.derecha, tiempo_caminar)
+let parado = animation.createAnimation(ActionKind.parado, tiempo_caminar)
 izquierda.addAnimationFrame(img`
     . . . . . . . . . . . . . . . . 
     . . . . 9 9 9 9 9 9 9 . . . . . 
