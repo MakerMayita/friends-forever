@@ -108,6 +108,7 @@ function Nivel_2 () {
 }
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     robot.destroy()
+    info.changeScoreBy(1)
 })
 let mySprite: Sprite = null
 let projectile: Sprite = null
@@ -776,6 +777,7 @@ tiles.setTilemap(tiles.createTilemap(hex`400010000303030303030303030303030303030
     `, [myTiles.transparency16,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6], TileScale.Sixteen))
 info.setLife(3)
 info.startCountdown(30)
+info.setScore(0)
 let izquierda = animation.createAnimation(ActionKind.izquierda, tiempo_caminar)
 let derecha = animation.createAnimation(ActionKind.derecha, tiempo_caminar)
 let parado = animation.createAnimation(ActionKind.parado, tiempo_caminar)
