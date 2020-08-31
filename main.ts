@@ -37,9 +37,6 @@ function Nivel_3 () {
         . . . . 2 2 2 2 . . . . . . . . . . . . . . . 2 2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 2 . . 2 2 
         `, [myTiles.transparency16,myTiles.tile4,myTiles.tile12,myTiles.tile14], TileScale.Sixteen))
 }
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location) {
-    Nivel_2()
-})
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     makerController.player1.press(ArcadeButton.B)
     projectile = sprites.createProjectileFromSprite(img`
@@ -51,7 +48,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         6 8 8 9 9 9 9 6 
         . 6 8 8 8 8 6 . 
         . . 6 6 6 6 . . 
-        `, Heroina, 50, 0)
+        `, mySprite, 100, 0)
 })
 function Level_1 () {
     game.splash("Nivel 1")
@@ -59,17 +56,14 @@ function Level_1 () {
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
     info.changeLifeBy(-1)
 })
-controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.setAction(Heroina, ActionKind.parado)
-})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     makerController.player1.press(ArcadeButton.A)
-    if (Heroina.isHittingTile(CollisionDirection.Bottom)) {
-        Heroina.vy = -150
+    if (mySprite.isHittingTile(CollisionDirection.Bottom)) {
+        mySprite.vy = -150
     }
 })
 function Amiga () {
-    Heroina = sprites.create(img`
+    mySprite = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . 9 9 9 9 9 9 9 9 . . . . 
         9 9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 
@@ -95,16 +89,16 @@ function Amiga () {
         . . . . . . 4 . . 4 . . . . . . 
         . . . . . 3 3 . . 3 3 . . . . . 
         `, SpriteKind.Player)
-    scene.cameraFollowSprite(Heroina)
-    controller.moveSprite(Heroina, 100, 0)
-    Heroina.ay = 300
+    scene.cameraFollowSprite(mySprite)
+    controller.moveSprite(mySprite, 100, 0)
+    mySprite.ay = 300
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.setAction(Heroina, ActionKind.izquierda)
+    animation.setAction(mySprite, ActionKind.izquierda)
     makerController.player1.press(ArcadeButton.Left)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.setAction(Heroina, ActionKind.derecha)
+    animation.setAction(mySprite, ActionKind.derecha)
     makerController.player1.press(ArcadeButton.Right)
 })
 function Nivel_2 () {
@@ -115,11 +109,9 @@ function Nivel_2 () {
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     robot.destroy()
 })
+let mySprite: Sprite = null
 let projectile: Sprite = null
-let tiempo_caminar = 0
-let Heroina: Sprite = null
 let robot: Sprite = null
-Level_1()
 game.setDialogTextColor(3)
 scene.setBackgroundImage(img`
     3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
@@ -736,6 +728,7 @@ scene.setBackgroundImage(img`
     1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
     `)
 game.showLongText("Tu misión es ayudar a tu amiga salvandola", DialogLayout.Top)
+Level_1()
 Amiga()
 robot = sprites.create(img`
     . . . . . . . . . . . . . . . . 
@@ -782,62 +775,8 @@ tiles.setTilemap(tiles.createTilemap(hex`400010000303030303030303030303030303030
     `, [myTiles.transparency16,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6], TileScale.Sixteen))
 info.setLife(3)
 info.startCountdown(30)
-music.playMelody("C5 B A G F E D C ", 120)
-Heroina = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . 9 9 9 9 9 9 9 9 . . . . 
-    9 9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 
-    9 9 9 9 9 4 f 4 4 f 4 9 9 9 9 9 
-    9 9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 
-    . . . . 9 4 f f f f 4 9 . . . . 
-    . . . 9 . 4 4 4 4 4 4 . 9 . . . 
-    . . . 9 . . . 4 4 . . . 9 . . . 
-    . . . a a a a 3 3 a a a a . . . 
-    . . . a a a a 3 3 a a a a . . . 
-    . . . a a . a 3 3 a . a a . . . 
-    . . . a a . a 3 3 a . a a . . . 
-    . . . 4 4 . a 3 3 a . 4 4 . . . 
-    . . . 4 4 . a 3 3 a . 4 4 . . . 
-    . . . . . . a 3 3 a . . . . . . 
-    . . . . . 3 3 3 3 3 3 . . . . . 
-    . . . . 3 3 3 3 3 3 3 3 . . . . 
-    . . . 3 3 3 3 3 3 3 3 3 3 . . . 
-    . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
-    . . . . . . 4 . . 4 . . . . . . 
-    . . . . . . 4 . . 4 . . . . . . 
-    . . . . . . 4 . . 4 . . . . . . 
-    . . . . . . 4 . . 4 . . . . . . 
-    . . . . . 3 3 . . 3 3 . . . . . 
-    `, SpriteKind.Player)
-let izquierda = animation.createAnimation(ActionKind.izquierda, tiempo_caminar)
-let derecha = animation.createAnimation(ActionKind.derecha, tiempo_caminar)
-let parado = animation.createAnimation(ActionKind.parado, tiempo_caminar)
-parado.addAnimationFrame(img`
-    . . . . . . . . . . . . . . . . 
-    . . . 9 9 9 9 9 9 9 9 . . . . . 
-    9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 . 
-    9 9 9 9 4 f 4 4 f 4 9 9 9 9 9 . 
-    9 9 . 9 4 4 4 4 4 4 9 . 9 9 9 . 
-    . . . 9 4 f f f f 4 9 . . . . . 
-    . . . 9 4 4 4 4 4 4 9 . . . . . 
-    . . 9 . . . 4 4 . . . 9 . . . . 
-    . . a a a a 3 3 a a a a . . . . 
-    . . a a a a 3 3 a a a a . . . . 
-    . . a a . a 3 3 a . a a . . . . 
-    . . a a . a 3 3 a . a a . . . . 
-    . . 4 4 . a 3 3 a . 4 4 . . . . 
-    . . 4 4 . a 3 3 a . 4 4 . . . . 
-    . . . . . a 3 3 a . . . . . . . 
-    . . . . 3 3 3 3 3 3 . . . . . . 
-    . . . 3 3 3 3 3 3 3 3 . . . . . 
-    . . 3 3 3 3 3 3 3 3 3 3 . . . . 
-    . 3 3 3 3 3 3 3 3 3 3 3 3 . . . 
-    . . . . . 4 . . 4 . . . . . . . 
-    . . . . . 4 . . 4 . . . . . . . 
-    . . . . . 4 . . 4 . . . . . . . 
-    . . . . . 4 . . 4 . . . . . . . 
-    . . . . 3 3 . . 3 3 . . . . . . 
-    `)
+let izquierda = animation.createAnimation(ActionKind.izquierda, 1000)
+let derecha = animation.createAnimation(ActionKind.derecha, 1000)
 izquierda.addAnimationFrame(img`
     . . . . . . . . . . . . . . . . 
     . . . . 9 9 9 9 9 9 9 . . . . . 
@@ -995,12 +934,7 @@ derecha.addAnimationFrame(img`
     . . . . . . . 3 3 . . . . . . . 
     `)
 game.onUpdate(function () {
-    if (Heroina.tileKindAt(TileDirection.Bottom, myTiles.tile4)) {
-    	
-    }
-})
-game.onUpdate(function () {
-    if (Heroina.isHittingTile(CollisionDirection.Bottom)) {
-        Heroina.ay = 300
+    if (mySprite.isHittingTile(CollisionDirection.Bottom)) {
+        mySprite.ay = 300
     }
 })
