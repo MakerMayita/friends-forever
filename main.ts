@@ -41,6 +41,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location
     Nivel_2()
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    makerController.player1.press(ArcadeButton.B)
     projectile = sprites.createProjectileFromSprite(img`
         . . 6 6 6 6 . . 
         . 6 8 8 8 8 6 . 
