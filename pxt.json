@@ -14,8 +14,7 @@
         "test.ts",
         "tilemap.g.jres",
         "tilemap.g.ts",
-        "tsconfig.json",
-        null
+        "tsconfig.json"
     ],
     "targetVersions": {
         "target": "1.0.16",
