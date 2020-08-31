@@ -103,6 +103,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.setAction(Heroina, ActionKind.derecha)
+    makerController.player1.press(ArcadeButton.Right)
 })
 function Nivel_2 () {
     game.splash("Nivel 2")
