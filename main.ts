@@ -94,11 +94,11 @@ function Amiga () {
     mySprite.ay = 300
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.setAction(mySprite, ActionKind.izquierda)
+    animation.setAction(heroina, ActionKind.izquierda)
     makerController.player1.press(ArcadeButton.Left)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.setAction(mySprite, ActionKind.derecha)
+    animation.setAction(heroina, ActionKind.derecha)
     makerController.player1.press(ArcadeButton.Right)
 })
 function Nivel_2 () {
