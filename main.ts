@@ -99,6 +99,7 @@ function Amiga () {
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.setAction(Heroina, ActionKind.izquierda)
+    makerController.player1.press(ArcadeButton.Left)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.setAction(Heroina, ActionKind.derecha)
