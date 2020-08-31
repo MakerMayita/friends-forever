@@ -98,7 +98,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     makerController.player1.press(ArcadeButton.Left)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.setAction(heroina, ActionKind.derecha)
+    animation.setAction(mySprite, ActionKind.derecha)
     makerController.player1.press(ArcadeButton.Right)
 })
 function Nivel_2 () {
@@ -110,9 +110,8 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
     robot.destroy()
     info.changeScoreBy(1)
 })
-let mySprite: Sprite = null
 let projectile: Sprite = null
-let heroina: Sprite = null
+let mySprite: Sprite = null
 let tiempo_caminar = 0
 let robot: Sprite = null
 game.setDialogTextColor(3)
@@ -937,9 +936,9 @@ derecha.addAnimationFrame(img`
     . . . . . . . 4 . . . . . . . . 
     . . . . . . . 3 3 . . . . . . . 
     `)
-animation.attachAnimation(heroina, izquierda)
-animation.attachAnimation(heroina, derecha)
-animation.attachAnimation(heroina, parado)
+animation.attachAnimation(mySprite, izquierda)
+animation.attachAnimation(mySprite, derecha)
+animation.attachAnimation(mySprite, parado)
 game.onUpdate(function () {
     if (mySprite.isHittingTile(CollisionDirection.Bottom)) {
         mySprite.ay = 300
