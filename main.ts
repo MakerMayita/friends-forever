@@ -63,6 +63,7 @@ controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.setAction(Heroina, ActionKind.parado)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    makerController.player1.press(ArcadeButton.A)
     if (Heroina.isHittingTile(CollisionDirection.Bottom)) {
         Heroina.vy = -150
     }
