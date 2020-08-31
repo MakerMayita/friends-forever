@@ -731,7 +731,6 @@ scene.setBackgroundImage(img`
     `)
 game.showLongText("Tu misión es ayudar a tu amiga salvandola", DialogLayout.Top)
 Level_1()
-Amiga()
 robot = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
