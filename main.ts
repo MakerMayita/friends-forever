@@ -101,6 +101,9 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.setAction(heroina, ActionKind.derecha)
     makerController.player1.press(ArcadeButton.Right)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+	
+})
 function Nivel_2 () {
     game.splash("Nivel 2")
     info.startCountdown(30)
