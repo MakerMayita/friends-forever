@@ -94,7 +94,7 @@ function Amiga () {
     mySprite.ay = 300
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.setAction(heroina, ActionKind.izquierda)
+    animation.setAction(mySprite, ActionKind.izquierda)
     makerController.player1.press(ArcadeButton.Left)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
