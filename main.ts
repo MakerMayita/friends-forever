@@ -109,8 +109,9 @@ function Nivel_2 () {
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     robot.destroy()
 })
-let mySprite: Sprite = null
 let projectile: Sprite = null
+let mySprite: Sprite = null
+let anim: animation.Animation = null
 let robot: Sprite = null
 game.setDialogTextColor(3)
 scene.setBackgroundImage(img`
@@ -933,6 +934,9 @@ derecha.addAnimationFrame(img`
     . . . . . . . 4 . . . . . . . . 
     . . . . . . . 3 3 . . . . . . . 
     `)
+animation.attachAnimation(mySprite, anim)
+animation.attachAnimation(mySprite, anim)
+animation.attachAnimation(mySprite, anim)
 game.onUpdate(function () {
     if (mySprite.isHittingTile(CollisionDirection.Bottom)) {
         mySprite.ay = 300
