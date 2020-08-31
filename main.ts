@@ -33,6 +33,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location
     Nivel_2()
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    makerController.player1.press(ArcadeButton.B)
     projectile = sprites.createProjectileFromSprite(img`
         . . 6 6 6 6 . . 
         . 6 8 8 8 8 6 . 
@@ -87,6 +88,7 @@ function Amiga () {
     Heroina.ay = 300
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    makerController.player1.press(ArcadeButton.Left)
     Heroina.setImage(img`
         . . . . . . . . . . . . . . . . 
         . . . . 9 9 9 9 9 9 9 9 . . . . 
@@ -115,6 +117,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         `)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    makerController.player1.press(ArcadeButton.Right)
     Heroina.setImage(img`
         . . . . . . . . . . . . . . . . 
         . . . . 9 9 9 9 9 9 9 9 . . . . 

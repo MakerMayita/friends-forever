@@ -1,7 +1,8 @@
 {
     "name": "friends-forever",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "maker-controller": "github:microsoft/pxt-maker-controller#v0.0.7"
     },
     "files": [
         ".vscode/settings.json",
